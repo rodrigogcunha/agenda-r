@@ -26,8 +26,8 @@ btn_sobre.addEventListener("click", (evt) => {
 const abrirPagina = (el, url) => {
   const abas = [...document.querySelectorAll(".aba")];
   abas.forEach((e) => {
-    e.classList.remove(".abaSelecionada");
+    e.classList.remove("abaSelecionada");
   });
-  el.classList.add(".abaSelecionada");
+  el.classList.add("abaSelecionada");
   window.open(url, "if_principal");
 };
