@@ -100,3 +100,31 @@
     padding: 10px;
     border-radius: 10px;
 }
+
+/* PESQUISAR */
+
+.pesquisa {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+}
+
+.campoPesq {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+input[type=text] {
+    border: 1px solid red;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+label {
+    margin-right: 5px;
+}
