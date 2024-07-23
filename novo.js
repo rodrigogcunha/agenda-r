@@ -14,18 +14,28 @@ btn_gravar.addEventListener("click", (evt) => {
   };
 
   const cabecalho = {
-    method: 'POST',
-    body: JSON.stringify(dados)
-  }
+    method: "POST",
+    body: JSON.stringify(dados),
+  };
 
   const endpoint = "http://127.0.0.1:1880/addcontatos";
-  fetch(endpoint, cabecalho)
-    .then((res) => {
-        if(res.status == 200){
-            console.log('OK')
-        } else {
-            alert("ERRO ao gravar contato.")
-        }
-    })
-
+  fetch(endpoint, cabecalho).then((res) => {
+    if (res.status == 200) {
+      f_nome.value = "";
+      f_celular.value = "";
+      f_email.value = "";
+      f_dtnasc.value = "";
+      f_nome.focus();
+    } else {
+      alert("ERRO ao gravar contato.");
+    }
+  });
 });
+
+btn_cancelar.addEventListener("click", (evt) => {
+  f_nome.value = "";
+      f_celular.value = "";
+      f_email.value = "";
+      f_dtnasc.value = "";
+      f_nome.focus();
+})
