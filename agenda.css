@@ -128,3 +128,55 @@ input[type=text] {
 label {
     margin-right: 5px;
 }
+
+.resultado {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 800px;
+}
+
+.titulos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    width: inherit;
+}
+
+.dados {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: inherit;
+}
+
+.linhadados {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    width: inherit;
+}
+
+.c1 {
+    width: 10%;
+}
+
+.c2 {
+    width: 40%;
+}
+
+.c3 {
+    width: 20%;
+}
+
+.c4 {
+    width: 20%;
+}
+
+.c5 {
+    width: 10%;
+}
