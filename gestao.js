@@ -1,10 +1,9 @@
-const btn_pesq = document.querySelector("#btn_pesq");
-const f_txtpesq = document.querySelector("#f_txtpesq");
 const dados = document.querySelector("#dados");
 
-btn_pesq.addEventListener("click", (evt) => {
-  dados.innerHTML = "";
-  const valorpesq = f_txtpesq.value;
+const preencherdgv = () => {
+
+    dados.innerHTML = "";
+    const valorpesq = f_txtpesq.value;
   if (valorpesq == "") {
     alert("Digite algo para pesquisar!");
     f_txtpesq.focus();
@@ -49,4 +48,4 @@ btn_pesq.addEventListener("click", (evt) => {
       })
       
     });
-});
+};
