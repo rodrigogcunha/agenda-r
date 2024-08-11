@@ -225,3 +225,58 @@ label {
   width: 30%;
   cursor: pointer;
 }
+
+/* POPUP */
+
+.fundopopup {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+}
+
+.janelapopup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 500px;
+}
+
+.titulopopup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #248;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px 5px 0px 0px;
+  width: inherit;
+}
+
+
+.principalpopup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: inherit;
+  background-color: #ddd;
+  padding: 5PX;
+}
+
+
+.rodapepopup {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: inherit;
+  background-color: #aaa;
+  padding: 5PX;
+  border-radius: 0px 0px 5px 5px;
+}
