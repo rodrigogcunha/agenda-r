@@ -1,4 +1,14 @@
 const dados = document.querySelector("#dados");
+const fundopopup = document.querySelector("#fundopopup")
+const btn_gravar = document.querySelector("#btn_gravar")
+const btn_cancelar = document.querySelector("#btn_cancelar")
+
+btn_gravar.addEventListener("click", (evt) => {
+  fundopopup.classList.add("ocultar")
+})
+btn_cancelar.addEventListener("click", (evt) => {
+  fundopopup.classList.add("ocultar")
+})
 
 const preencherdgv = () => {
   dados.innerHTML = "";
@@ -45,10 +55,13 @@ const preencherdgv = () => {
             // console.log(evt.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML)
             // console.log(evt.target.parentNode.parentNode.firstChild.innerHTML)
             removerContato(evt.target.parentNode.parentNode.firstChild.innerHTML)
-        })
+        });
         const imgeditar = document.createElement("img");
         imgeditar.setAttribute("src", "./edit.svg");
         imgeditar.setAttribute("class", "iconeop");
+        imgeditar.addEventListener("click", (evt) => {
+          fundopopup.classList.remove("ocultar")
+      });
         c6.appendChild(imgdelete);
         c6.appendChild(imgeditar);
         linha.appendChild(c6);
