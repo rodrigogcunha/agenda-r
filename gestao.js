@@ -2,9 +2,20 @@ const dados = document.querySelector("#dados");
 const fundopopup = document.querySelector("#fundopopup")
 const btn_gravar = document.querySelector("#btn_gravar")
 const btn_cancelar = document.querySelector("#btn_cancelar")
+const f_id = document.querySelector("#f_id")
+const f_nome = document.querySelector("#f_nome")
+const f_celular = document.querySelector("#f_celular")
+const f_email = document.querySelector("#f_email")
+const f_dtnasc = document.querySelector("#f_dtnasc")
 
 btn_gravar.addEventListener("click", (evt) => {
   fundopopup.classList.add("ocultar")
+  const endpoint = `http://127.0.0.1:1880/atualizarcontatos`
+  f_id.value = dados[0].innerHTML
+  f_nome.value = dados[1].innerHTML
+  f_celular.value = dados[2].innerHTML
+  f_email.value = dados[3].innerHTML
+  f_dtnasc.value = dados[4].innerHTML
 })
 btn_cancelar.addEventListener("click", (evt) => {
   fundopopup.classList.add("ocultar")
@@ -61,6 +72,12 @@ const preencherdgv = () => {
         imgeditar.setAttribute("class", "iconeop");
         imgeditar.addEventListener("click", (evt) => {
           fundopopup.classList.remove("ocultar")
+          const dados = [...evt.target.parentNode.parentNode.childNodes]
+          f_id.value = dados[0].innerHTML
+          f_nome.value = dados[1].innerHTML
+          f_celular.value = dados[2].innerHTML
+          f_email.value = dados[3].innerHTML
+          f_dtnasc.value = dados[4].innerHTML
       });
         c6.appendChild(imgdelete);
         c6.appendChild(imgeditar);
