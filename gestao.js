@@ -15,9 +15,9 @@ btn_gravar.addEventListener("click", (evt) => {
   .then(res => {
     if(res.status == "200" ) {
       alert("dados atualizados")
-    } else {
-      alert("erro atualizar")
       preencherdgv()
+    } else {
+      alert("erro atualizar")      
     }
   })
   f_id.value = dados[0].innerHTML
@@ -86,7 +86,7 @@ const preencherdgv = () => {
           f_nome.value = dados[1].innerHTML
           f_celular.value = dados[2].innerHTML
           f_email.value = dados[3].innerHTML
-          f_dtnasc.value = dados[4].innerHTML
+          f_dtnasc.value = dados[4].innerHTML.split("T")[0]
       });
         c6.appendChild(imgdelete);
         c6.appendChild(imgeditar);
